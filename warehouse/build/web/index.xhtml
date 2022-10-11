@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://xmlns.jcp.org/jsf/passthrough"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>WAREHOUSE KITA-LOGIN</title>
+        <link   />
+        <link  />
+        <style></style>
+    </h:head>
+    
+    <h:body>
+        <section class="sec">
+            <div class="container">
+                <div class="row">
+                    <div class="row2">
+                        <div class="text">
+                            <h:graphicImage value="IMAGE/warehouse logo.png" alt="logo" width="250"/>
+                        </div>
+                        <div class="border shadow">
+                            <div class="border body">
+                                <h1 class="">Login</h1>
+                                <h:form class="validation" p:novalidate="true" p:autocomplate="off">
+                                    <div class="row3">
+                                        <h:outputLabel class="outputRow3" for="email" value="Email"/>
+                                        <h:inputText value="#{customer.email}" id="blank" p:type="email" class="email" p:required="true" p:autofocus="true"/>
+                                    <div class="invalid">Your Email Is Invalid</div>
+                                    </div>
+                                    <div class="row3">
+                                        <h:outputLabel class="outputRow3" for="password" value="password"/>        
+                                        <h:inputSecret value="#{customer.password}" id="password" class="blank" p:required="true"/>
+                            <div class="invalidFeedback">Password is Invalid</div>
+                            </div> 
+                                    <div class="center">
+                                        <h:commandButton  type="submit" class="btn" value="Login" action="#{customer.login_customer()}" />  
+                                    </div>     
+                                </h:form>
+                                       
+                            </div>
+                            <div class="borderFooter">
+                                <div class="text">
+                                    Regist Here
+                                    <h:form class="">
+                                        <h:commandLink action="/register.xhtml" class="" value="Create Account"/>
+                                    </h:form>
+                                </div>
+                                <div class="text">
+                                    
+                                    <h:form class="">
+                                        <h:commandLink action="/staff.xhtml" class="" value="STAFF"/>
+                                    </h:form>
+                                </div>
+                            </div>
+                        </div>
+                             
+                    </div>
+                </div>
+            </div>
+        </section>
+    </h:body>
+</html>
+
